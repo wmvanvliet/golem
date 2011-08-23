@@ -45,8 +45,8 @@ class BaseNode:
     self.log.info('testing on ' + str(d))
 
     # check validity of d
-    if d.ninstances == 0:
-      raise ValueError('Got empty DataSet.')
+    #if d.ninstances == 0:
+    #  raise ValueError('Got empty DataSet.')
 
     if self.empty_d!= None and self.empty_d != d[:0]:
       raise ValueError('Got %s, expected %s in %s' % 

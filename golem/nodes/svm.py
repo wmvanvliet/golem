@@ -38,7 +38,7 @@ def cvxopt_svm(K, labels, c, D=None):
   G2 = D.T
   G = cvx.sparse([G1, G2])
   h = cvx.matrix([0. for i in range(m)] + [c/m for i in range(m)])
-  A = cvx.matrix(labels)
+  A = cvx.matrix(labels.astype(np.float))
   r = cvx.matrix(0.)
 
   log.debug('Solving QP')
